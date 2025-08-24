@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelorix - Find & Hire Top Freelancers</title>
+  <meta name="description" content="Freelorix is the professional freelancing marketplace to hire top talent and find global opportunities.">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="container flex-between">
+      <a href="index.html" class="logo" aria-label="Freelorix Home">Freelorix</a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="jobs brows.html">Find Work</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="dashboard-clint.html">dashboard</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="auth-signin.html" class="btn btn-outline" aria-label="Login to Freelorix">Login</a>
+        <a href="auth-signup.html" class="btn btn-primary" aria-label="Sign Up for Freelorix">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" aria-label="Hero Section">
+      <div class="container hero-content">
+        <h1>Hire Top Freelancers.<br>Grow Your Business.</h1>
+        <p>Freelorix connects clients and freelancers worldwide. Post your job or find your next opportunity today.</p>
+        <div class="hero-cta">
+          <a href="post-job.html" class="btn btn-primary">Post a Job</a>
+          <a href="jobs brows.html" class="btn btn-secondary">Find Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORIES ========== -->
+    <section class="categories" aria-label="Popular Categories">
+      <div class="container">
+        <h2 class="section-title">Popular Categories</h2>
+        <div class="grid-4">
+          <div class="category-card" tabindex="0">💻 Web Development</div>
+          <div class="category-card" tabindex="0">🎨 Design & Creative</div>
+          <div class="category-card" tabindex="0">✍️ Writing & Translation</div>
+          <div class="category-card" tabindex="0">📈 Sales & Marketing</div>
+          <div class="category-card" tabindex="0">📊 Data & Analytics</div>
+          <div class="category-card" tabindex="0">🎥 Video & Animation</div>
+          <div class="category-card" tabindex="0">🎶 Music & Audio</div>
+          <div class="category-card" tabindex="0">🛠 Support & Admin</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURED FREELANCERS ========== -->
+    <section class="featured" aria-label="Featured Freelancers">
+      <div class="container">
+        <h2 class="section-title">Top Freelancers</h2>
+        <div class="grid-3">
+          <div class="freelancer-card">
+            <img src="assets/user1.jpg" alt="Aditya Kumar, Full-Stack Developer" />
+            <h3>Aditya Kumar</h3>
+            <p>Full-Stack Developer</p>
+            <span class="rating" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+          </div>
+          <div class="freelancer-card">
+            <img src="assets/user2.jpg" alt="Neha Sharma, UI/UX Designer" />
+            <h3>Neha Sharma</h3>
+            <p>UI/UX Designer</p>
+            <span class="rating" aria-label="4 star rating">⭐⭐⭐⭐</span>
+          </div>
+          <div class="freelancer-card">
+            <img src="assets/user3.jpg" alt="Ravi Singh, Digital Marketer" />
+            <h3>Ravi Singh</h3>
+            <p>Digital Marketer</p>
+            <span class="rating" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials" aria-label="Client Testimonials">
+      <div class="container">
+        <h2 class="section-title">What Clients Say</h2>
+        <div class="grid-2">
+          <blockquote class="testimonial-card">
+            <p>“Freelorix helped us find amazing talent within days. Highly recommend!”</p>
+            <cite>— Startup CEO</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>“The best platform to work with global clients. Smooth and professional.”</p>
+            <cite>— Freelancer</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter" aria-label="Newsletter Subscription">
+      <div class="container flex-between">
+        <h2>Stay Updated</h2>
+        <form class="newsletter-form" aria-label="Subscribe to Newsletter">
+          <label for="newsletter-email" class="visually-hidden">Email address</label>
+          <input id="newsletter-email" type="email" placeholder="Enter your email" required aria-required="true" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <span class="form-message" aria-live="polite"></span>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container grid-4">
+      <div>
+        <h3>Freelorix</h3>
+        <p>Your trusted freelancing marketplace.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help-center.html">Help Center</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <ul class="social-links">
+          <li><a href="#" aria-label="LinkedIn"><span aria-hidden="true">LinkedIn</span></a></li>
+          <li><a href="#" aria-label="Twitter"><span aria-hidden="true">Twitter</span></a></li>
+          <li><a href="#" aria-label="Facebook"><span aria-hidden="true">Facebook</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Freelorix. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
