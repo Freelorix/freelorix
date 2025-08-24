@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelorix Client Dashboard</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Freelorix</div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="#"><i class="fa-solid fa-briefcase"></i> My Jobs</a></li>
+      <li><a href="#"><i class="fa-solid fa-users"></i> Hire Freelancers</a></li>
+      <li><a href="#"><i class="fa-solid fa-comments"></i> Messages</a></li>
+      <li><a href="#"><i class="fa-solid fa-wallet"></i> Wallet</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+
+    <!-- Topbar -->
+    <header class="dashboard-topbar">
+      <div class="search-box">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search freelancers, jobs...">
+      </div>
+      <div class="topbar-actions">
+        <i class="fa-solid fa-bell"></i>
+        <div class="profile-dropdown">
+          <img src="assets/images/user.jpg" alt="User" class="user-avatar" onclick="toggleMenu()">
+          <ul id="dropdownMenu" class="dropdown hidden">
+            <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3>18</h3>
+        <p>Jobs Posted</p>
+      </div>
+      <div class="stat-card">
+        <h3>46</h3>
+        <p>Proposals Received</p>
+      </div>
+      <div class="stat-card">
+        <h3>$5,300</h3>
+        <p>Total Spent</p>
+      </div>
+      <div class="stat-card">
+        <h3>4.8⭐</h3>
+        <p>Freelancer Ratings</p>
+      </div>
+    </section>
+
+    <!-- Content Grid -->
+    <section class="grid-2 dashboard-widgets">
+
+      <!-- Active Jobs -->
+      <div class="widget-card">
+        <h2 class="widget-title">Active Jobs</h2>
+        <ul class="job-list">
+          <li>
+            <h4>Mobile App Development</h4>
+            <p>5 Proposals • $2000 Budget</p>
+          </li>
+          <li>
+            <h4>Website Redesign</h4>
+            <p>8 Proposals • $1500 Budget</p>
+          </li>
+          <li>
+            <h4>SEO & Digital Marketing</h4>
+            <p>3 Proposals • $800 Budget</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Recent Proposals -->
+      <div class="widget-card">
+        <h2 class="widget-title">Recent Proposals</h2>
+        <ul class="message-list">
+          <li>
+            <img src="assets/images/freelancer1.jpg" alt="">
+            <div>
+              <h4>Emily R.</h4>
+              <p>Proposal for App Development • $1800</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/freelancer2.jpg" alt="">
+            <div>
+              <h4>James K.</h4>
+              <p>Proposal for Website Redesign • $1400</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>

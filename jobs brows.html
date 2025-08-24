@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Jobs - Freelorix</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Freelorix</div>
+    <ul class="sidebar-menu">
+      <li><a href="dashboard-freelancer.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="jobs-browse.html" class="active"><i class="fa-solid fa-briefcase"></i> Browse Jobs</a></li>
+      <li><a href="messages.html"><i class="fa-solid fa-comments"></i> Messages</a></li>
+      <li><a href="wallet.html"><i class="fa-solid fa-wallet"></i> Wallet</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="dashboard-main">
+
+    <!-- Topbar -->
+    <header class="dashboard-topbar">
+      <div class="search-box">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search jobs by title, skills...">
+      </div>
+      <div class="topbar-actions">
+        <i class="fa-solid fa-bell"></i>
+        <div class="profile-dropdown">
+          <img src="assets/images/user.jpg" alt="User" class="user-avatar" onclick="toggleMenu()">
+          <ul id="dropdownMenu" class="dropdown hidden">
+            <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Browse Jobs -->
+    <section class="jobs-section">
+
+      <!-- Filters Sidebar -->
+      <aside class="filters">
+        <h3>Filters</h3>
+        <label>Category</label>
+        <select>
+          <option>All</option>
+          <option>Web Development</option>
+          <option>UI/UX Design</option>
+          <option>Content Writing</option>
+          <option>Mobile Apps</option>
+        </select>
+
+        <label>Budget Range ($)</label>
+        <input type="range" min="50" max="5000" value="500">
+        <span>Up to $500</span>
+
+        <label>Experience Level</label>
+        <ul>
+          <li><input type="checkbox"> Entry Level</li>
+          <li><input type="checkbox"> Intermediate</li>
+          <li><input type="checkbox"> Expert</li>
+        </ul>
+
+        <label>Location</label>
+        <input type="text" placeholder="Any location">
+
+        <button class="btn btn-primary">Apply Filters</button>
+      </aside>
+
+      <!-- Jobs Listing -->
+      <div class="jobs-listing">
+        <h2>Available Jobs</h2>
+
+        <!-- Job Card -->
+        <div class="job-card">
+          <div class="job-header">
+            <h3>React Developer for SaaS Platform</h3>
+            <button class="save-btn"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+          <p>Looking for a skilled React developer to build dashboards and integrate APIs.</p>
+          <div class="job-meta">
+            <span><i class="fa-solid fa-dollar-sign"></i> $1200 - $1500</span>
+            <span><i class="fa-solid fa-clock"></i> 20 days</span>
+            <span><i class="fa-solid fa-map-marker-alt"></i> Remote</span>
+          </div>
+          <div class="job-tags">
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>API Integration</span>
+          </div>
+         <button class="btn btn-outline"><a href="job-detail.html">View Details</a></button>
+        </div>
+
+        <!-- Job Card -->
+        <div class="job-card">
+          <div class="job-header">
+            <h3>UI/UX Designer Needed for Mobile App</h3>
+            <button class="save-btn"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+          <p>We need an experienced designer to create wireframes and prototypes.</p>
+          <div class="job-meta">
+            <span><i class="fa-solid fa-dollar-sign"></i> $700 - $900</span>
+            <span><i class="fa-solid fa-clock"></i> 10 days</span>
+            <span><i class="fa-solid fa-map-marker-alt"></i> India</span>
+          </div>
+          <div class="job-tags">
+            <span>Figma</span>
+            <span>Prototyping</span>
+            <span>UI Design</span>
+          </div>
+          <button class="btn btn-outline"><a href="job-detail.html">View Details</a></button>
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more">
+          <button class="btn btn-primary">Load More</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>

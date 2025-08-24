@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job - Freelorix</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Aapka CSS file link -->
+</head>
+<body>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Freelorix</div>
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="jobs-browse.html">Browse Jobs</a></li>
+        <li><a href="postsjob.html" class="active">Post Job</a></li>
+        <li><a href="profile-freel.html">Profile</a></li>
+        <li><a href="#" class="logout">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <div class="dashboard-topbar flex-between">
+        <h2>Post a New Job</h2>
+      </div>
+
+      <div class="widget-card">
+        <form action="#" method="POST" class="auth-form">
+
+          <!-- Job Title -->
+          <div class="form-group">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter job title" required>
+          </div>
+
+          <!-- Job Description -->
+          <div class="form-group">
+            <label for="jobDescription">Job Description</label>
+            <textarea id="jobDescription" name="jobDescription" rows="5" placeholder="Describe the job" required></textarea>
+          </div>
+
+          <!-- Skills Required -->
+          <div class="form-group">
+            <label for="skills">Skills Required</label>
+            <input type="text" id="skills" name="skills" placeholder="e.g., JavaScript, React, Node.js">
+          </div>
+
+          <!-- Job Type -->
+          <div class="form-group">
+            <label for="jobType">Job Type</label>
+            <select id="jobType" name="jobType">
+              <option value="fulltime">Full-time</option>
+              <option value="parttime">Part-time</option>
+              <option value="freelance">Freelance</option>
+              <option value="internship">Internship</option>
+            </select>
+          </div>
+
+          <!-- Budget / Salary -->
+          <div class="form-group">
+            <label for="budget">Budget / Salary</label>
+            <input type="text" id="budget" name="budget" placeholder="Enter budget or salary">
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Post Job</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

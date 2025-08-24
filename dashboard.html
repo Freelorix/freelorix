@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelorix Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Freelorix</div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="#"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+      <li><a href="#"><i class="fa-solid fa-comments"></i> Messages</a></li>
+      <li><a href="#"><i class="fa-solid fa-wallet"></i> Wallet</a></li>
+      <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+      <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="dashboard-main">
+
+    <!-- ===== TOPBAR ===== -->
+    <header class="dashboard-topbar">
+      <div class="search-box">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search jobs, freelancers...">
+      </div>
+      <div class="topbar-actions">
+        <button id="themeToggle" class="btn btn-outline">🌙</button>
+        <i class="fa-solid fa-bell"></i>
+        <div class="profile-dropdown">
+          <img src="assets/images/user.jpg" alt="User" class="user-avatar" id="profileBtn">
+          <ul id="dropdownMenu" class="dropdown hidden">
+            <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3>$2,450</h3>
+        <p>Total Earnings</p>
+      </div>
+      <div class="stat-card">
+        <h3>12</h3>
+        <p>Active Jobs</p>
+      </div>
+      <div class="stat-card">
+        <h3>34</h3>
+        <p>Proposals Sent</p>
+      </div>
+      <div class="stat-card">
+        <h3>4.9⭐</h3>
+        <p>Rating</p>
+      </div>
+    </section>
+
+    <!-- ===== GRID WIDGETS ===== -->
+    <section class="grid-2 dashboard-widgets">
+
+      <!-- JOB FEED -->
+      <div class="widget-card">
+        <h2 class="widget-title">Latest Jobs</h2>
+        <ul class="job-list">
+          <li>
+            <h4>UI/UX Designer for App</h4>
+            <p>$500 • 5 days left</p>
+          </li>
+          <li>
+            <h4>React Developer Needed</h4>
+            <p>$800 • 10 days left</p>
+          </li>
+          <li>
+            <h4>Content Writer (Tech Blogs)</h4>
+            <p>$120 • 3 days left</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- MESSAGES -->
+      <div class="widget-card">
+        <h2 class="widget-title">Recent Messages</h2>
+        <ul class="message-list">
+          <li>
+            <img src="assets/images/client1.jpg" alt="">
+            <div>
+              <h4>Sarah J.</h4>
+              <p>Can you share the proposal?</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/client2.jpg" alt="">
+            <div>
+              <h4>David P.</h4>
+              <p>Looking forward to your design!</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ===== CHARTS ===== -->
+    <section class="grid-2 dashboard-widgets">
+      <div class="widget-card">
+        <h2 class="widget-title">Earnings Overview</h2>
+        <canvas id="earningsChart"></canvas>
+      </div>
+      <div class="widget-card">
+        <h2 class="widget-title">Job Status</h2>
+        <canvas id="jobsChart"></canvas>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // Profile Dropdown
+    const profileBtn = document.getElementById("profileBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    profileBtn.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Theme Toggle
+    const themeToggle = document.getElementById("themeToggle");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      themeToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+
+    // Charts
+    const ctx1 = document.getElementById('earningsChart');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Earnings',
+          data: [400, 800, 600, 1200, 900, 1500],
+          borderColor: '#6C63FF',
+          backgroundColor: 'rgba(108, 99, 255, 0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      }
+    });
+
+    const ctx2 = document.getElementById('jobsChart');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Completed', 'Ongoing', 'Pending'],
+        datasets: [{
+          label: 'Jobs',
+          data: [10, 5, 2],
+          backgroundColor: ['#06b6d4', '#3b82f6', '#f87171']
+        }]
+      }
+    });
+  </script>
+
+</body>
+</html>

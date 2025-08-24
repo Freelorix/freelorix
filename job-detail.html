@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Detail - Freelorix</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Freelorix</div>
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="jobs-browse.html">Browse Jobs</a></li>
+        <li><a href="postsjob.html">Post Job</a></li>
+        <li><a href="job-detail.html" class="active">Job Detail</a></li>
+        <li><a href="profile-freel.html">Profile</a></li>
+        <li><a href="#" class="logout">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <div class="dashboard-topbar flex-between">
+        <h2>Job Detail</h2>
+      </div>
+
+      <!-- Job Detail Card -->
+      <div class="job-detail-card">
+        <h3 class="job-title">Frontend Developer Needed</h3>
+        <div class="job-meta">
+          <span>Full-time</span> | 
+          <span>Budget: $500 - $800</span> | 
+          <span>Posted 2 days ago</span>
+        </div>
+        <div class="job-section">
+          <h4>Job Description</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nisl sit amet hendrerit faucibus, justo justo cursus libero, vitae tempus sapien lectus sed urna.</p>
+        </div>
+        <div class="job-section">
+          <h4>Skills Required</h4>
+          <ul class="skills-list">
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>CSS</li>
+            <li>HTML</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Apply Box -->
+      <div class="apply-box">
+        <h4>Submit Your Proposal</h4>
+        <form action="#" method="POST" class="auth-form">
+          <textarea name="proposal" placeholder="Write your proposal here..." required></textarea>
+          <input type="text" name="bid" placeholder="Enter your bid in $" required class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">Submit Proposal</button>
+        </form>
+      </div>
+
+      <!-- Existing Proposals -->
+      <div class="widget-card">
+        <h3 class="widget-title">Freelancer Proposals</h3>
+        <div class="proposal-item">
+          <div class="proposal-header">
+            <h3>John Doe</h3>
+            <span class="bid">$600</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. I am confident I can complete this project on time.</p>
+          <span class="status-pending">Pending</span>
+        </div>
+        <div class="proposal-item">
+          <div class="proposal-header">
+            <h3>Jane Smith</h3>
+            <span class="bid">$550</span>
+          </div>
+          <p>I have experience in React and frontend development. Ready to start immediately.</p>
+          <span class="status-accepted">Accepted</span>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
